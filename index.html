@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Sacramento&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -25,17 +30,24 @@
               black: '#151515',
             },
           },
+          screens: {
+            xl: { max: '1440px' },
+            lg: { max: '991px' },
+            md: { max: '767px' },
+            sm: { max: '550px' },
+            xsm: { max: '425px' },
+          },
         },
       };
     </script>
-    <title>dwelling - real estate</title>
+    <title>Dwelling</title>
   </head>
   <body class="p-0 m-0 box-border font-montserrat">
     <header
-      class="bg-[#FFFAE9] h-[1271px] w-full py-[35px] px-[250px] relative"
+      class="bg-[#FFFAE9] h-[1271px] w-full py-[35px] px-[335px] xl:px-[135px] lg:px-[35px] xsm:h-[120vh]"
     >
       <!-- Navbar -->
-      <nav class="flex items-center justify-between">
+      <nav class="flex items-center justify-between items-start">
         <div class="flex items-center space-x-[6px]">
           <svg width="26" height="25" viewBox="0 0 26 25" fill="none">
             <path
@@ -58,61 +70,82 @@
           </svg>
           <p class="text-[24px] font-bold">dwelling</p>
         </div>
-        <ul class="flex space-x-[42px] ml-[214px] text-4 font-regular">
-          <li><a href="">Home</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Renters</a></li>
-          <li><a href="">Homeowners</a></li>
-          <li><a href="">Reviews</a></li>
+        <ul class="flex gap-[42px] text-4 font-thin lg:gap-[22px] xsm:hidden">
+          <li><a href="#" class="hover:text-[#FD5F0E]">Home</a></li>
+          <li><a href="#" class="hover:text-[#FD5F0E]">About Us</a></li>
+          <li><a href="#" class="hover:text-[#FD5F0E]">Renters</a></li>
+          <li><a href="#" class="hover:text-[#FD5F0E]">Homeowners</a></li>
+          <li><a href="#" class="hover:text-[#FD5F0E]">Reviews</a></li>
         </ul>
+
+        <script>
+          // Grab HTML Elements
+          const btn = document.querySelector('button.mobile-menu-button');
+          const menu = document.querySelector('.mobile-menu');
+
+          // Add Event Listeners
+          btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+          });
+        </script>
         <p
-          class="ml-[224px] bg-[#FD5D11] py-[8px] px-[8px] rounded-[6px] w-[115px] text-center text-white"
+          class="bg-[#FD5D11] py-[8px] px-[8px] rounded-[6px] w-[115px] text-center text-white hover:scale-110 duration-300 transition-all cursor-pointer xsm:hidden"
         >
           Register
         </p>
       </nav>
       <!-- Hero -->
-      <div class="flex justify-between space-x-[30px] mt-[92px]">
-        <img src="assets/Rectangle 2.png" class="max-w-[325px] h-[425px]" />
+      <div
+        class="flex justify-between space-x-[30px] mt-[92px] lg:space-x-[20px] xsm:space-x-[5px]"
+      >
+        <img
+          src="assets/Rectangle 2.png"
+          class="max-w-[225px] h-[325px] lg:w-[170px] lg:h-[235px] xsm:w-[78ox] xsm:h-[95px]"
+        />
         <img
           src="assets/Rectangle 3.png"
-          class="max-w-[325px] h-[425px] mt-[50px]"
+          class="max-w-[225px] h-[325px] mt-[50px] lg:w-[170px] lg:h-[235px] xsm:w-[78ox] xsm:h-[95px]"
         />
-        <img src="assets/Rectangle 4.png" class="max-w-[325px] h-[425px]" />
+        <img
+          src="assets/Rectangle 4.png"
+          class="max-w-[225px] h-[325px] lg:w-[170px] lg:h-[235px] xsm:w-[78ox] xsm:h-[95px]"
+        />
         <img
           src="assets/Rectangle 5.png"
-          class="max-w-[325px] h-[425px] mt-[50px]"
+          class="max-w-[225px] h-[325px] mt-[50px] lg:w-[170px] lg:h-[235px] xsm:w-[78ox] xsm:h-[95px]"
         />
       </div>
       <div
-        class="font-poppins text-extrabold mt-[55px] text-[84px] leading-[114px]"
+        class="font-poppins text-extrabold mt-[55px] w-[65%] text-[84px] leading-[114px] xsm:text-[36px] xsm:leading-[46px] xsm:w-full"
       >
-        <h1 class="font-semibold">Home is where <br />your story begins</h1>
+        <h1 class="font-semibold">Home is where your story begins</h1>
       </div>
-      <p class="mt-[30px] text-[#666270]">
+      <p class="mt-[30px] text-[#666270] w-[35%] xsm:text-[14px] xsm:w-full">
         Building a next-generation collaborative platform to connect renters,
-        homeowners, and agents. Live the way you <br />want. Beautiful homes.
+        homeowners, and agents. Live the way you want. Beautiful homes.
         Incredible locations. Pricing that makes sense.
       </p>
-      <div class="flex justify-between mt-[50px] items-center">
+      <div
+        class="flex justify-between mt-[50px] items-center xsm:flex-col xsm:items-start"
+      >
         <div
-          class="flex bg-[#FFFFFF] w-[723px] h-[112px] py-[32px] items-center px-[20px] justify-between"
+          class="flex bg-[#FFFFFF] w-[723px] lg:w-[623px] h-[112px] py-[32px] items-center px-[20px] justify-between xsm:flex-col xsm:w-[300px] xsm:h-[208px] xsm:gap-3 xsm:items-start"
         >
           <input
             type="text"
             placeholder="Where are you moving?"
-            class="border-[1px] w-[253px] h-[48px] py-[11px] text-center rounded-[6px]"
+            class="border-[1px] w-[253px] lg:w-[183px] h-[48px] py-[11px] text-center rounded-[6px]"
           />
           <input
             type="text"
             placeholder="What type of home?"
-            class="border-[1px] w-[253px] h-[48px] py-[11px] text-center rounded-[6px]"
+            class="border-[1px] w-[253px] lg:w-[183px] h-[48px] py-[11px] text-center rounded-[6px]"
           />
           <p class="bg-[#FD5F0E] py-[11px] px-[22px] text-white rounded-[6px]">
             Find a home
           </p>
         </div>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center xsm:mt-[55px]">
           <svg width="26" height="38" viewBox="0 0 26 38" fill="none">
             <path
               d="M14.2 1H11.8C5.83532 1 1 5.83532 1 11.8V26.2C1 32.1647 5.83532 37 11.8 37H14.2C20.1647 37 25 32.1647 25 26.2V11.8C25 5.83532 20.1647 1 14.2 1Z"
@@ -135,45 +168,56 @@
     </header>
 
     <!-- Countdown -->
-    <section class="bg-[#6637EE] h-[650px] px-[250px] py-[120px]">
-      <div class="flex items-start justify-center">
-        <p class="text-[54px] text-white">
-          Trusted by the people <br />across the globe
+    <section
+      class="bg-[#6637EE] h-[55vh] py-[35px] px-[335px] xl:px-[135px] lg:px-[35px] lg:h-[55vh] xsm:h-[100vh]"
+    >
+      <div
+        class="flex items-start justify-center justify-between items-center gap-2 xsm:flex-col"
+      >
+        <p class="text-[54px] text-white w-[50%] xsm:text-[26px] xsm:w-full">
+          Trusted by the people across the globe
         </p>
 
-        <div class="ml-[250px]">
-          <p class="text-white text-[18px] leading-[28px]">
-            Building a next-generation collaborative platform to <br />
-            renters, homeowners, and agents. Live the way <br />you want.
-            Beautiful homes. Incredible locations. <br />
-            Pricing that makes sense.
+        <div class="w-[50%] xsm:w-full">
+          <p class="text-white text-[18px] leading-[28px] xsm:text-[18px]">
+            Building a next-generation collaborative platform to renters,
+            homeowners, and agents. Live the way you want. Beautiful homes.
+            Incredible locations. Pricing that makes sense.
           </p>
           <p class="text-white text-[18px] leading-[28px] mt-[20px]">
-            No matter what stage of life you’re in, having friends <br />to
-            share experiences with is what it’s all about.
+            No matter what stage of life you’re in, having friends to share
+            experiences with is what it’s all about.
           </p>
         </div>
       </div>
-      <div class="flex space-x-[150px] justify-center mt-[100px]">
-        <div class="flex items-start">
-          <img src="assets/emot1.png" class="w-[38px] h-[38px] mt-[20px]" />
-          <div class="ml-[14px] text-white">
-            <h1 class="text-[54px]">+20K</h1>
-            <p>Clients worldwide</p>
+      <div
+        class="flex gap-[150px] justify-center mt-[100px] lg:gap-[80px] xsm:flex-col xsm:justify-center xsm:gap-[48px]"
+      >
+        <div class="flex items-center gap-3">
+          <div>
+            <img src="assets/emot1.png" class="w-[58px] h-[58px]" />
+          </div>
+          <div class="">
+            <h1 class="text-white text-[54px] xsm:text-[26px]">+20K</h1>
+            <p class="text-white text-[18px] font-regular">Clients worldwide</p>
           </div>
         </div>
-        <div class="flex items-start">
-          <img src="assets/emot2.png" class="w-[38px] h-[38px] mt-[20px]" />
-          <div class="ml-[14px] text-white">
-            <h1 class="text-[54px]">95.7%</h1>
-            <p>Satisfied Clients</p>
+        <div class="flex items-center gap-3">
+          <div>
+            <img src="assets/emot2.png" class="w-[58px] h-[58px]" />
+          </div>
+          <div class="">
+            <h1 class="text-white text-[54px] xsm:text-[26px]">95.7%</h1>
+            <p class="text-white text-[18px]">Satisfied Clients</p>
           </div>
         </div>
-        <div class="flex items-start">
-          <img src="assets/emot3.png" class="w-[38px] h-[38px] mt-[20px]" />
-          <div class="ml-[14px] text-white">
-            <h1 class="text-[54px]">100+</h1>
-            <p>City Arounds</p>
+        <div class="flex items-center gap-3">
+          <div>
+            <img src="assets/emot3.png" class="w-[58px] h-[58px]" />
+          </div>
+          <div class="">
+            <h1 class="text-white text-[54px] xsm:text-[26px]">100+</h1>
+            <p class="text-white text-[18px]">City around</p>
           </div>
         </div>
       </div>
@@ -181,26 +225,31 @@
 
     <!-- About Us -->
     <section
-      class="flex h-[572px] my-[150px] mx-[250px] items-center justify-between"
+      class="flex h-[70vh] py-[65px] px-[335px] justify-between xl:px-[135px] items-center lg:px-[35px] xsm:h-[100vh] xsm:flex-col xsm:items-center"
     >
-      <div class="relative w-[570px]">
-        <img src="assets/about-img.png" class="w-[470px] h-[470px]" />
+      <div class="relative w-[570px] xsm:left-[130px]">
+        <img
+          src="assets/about-img.png"
+          class="w-[470px] h-[470px] lg:w-[370px] lg:h-[370px] xsm:w-[270px] xsm:h-[270px]"
+        />
         <img
           src="assets/card-about.png"
-          class="absolute left-[342px] bottom-0"
+          class="absolute left-[342px] bottom-0 lg:left-[300px] lg:w-[138px] lg:h-[138px] xsm:left-[200px]"
         />
       </div>
-      <div class="relative w-[570px] justify-end">
-        <p class="font-monserrat font-medium text-[54px] leading-[64px]">
-          Providing the <br />effective solutions <br />for you
+      <div class="justify-end w-[470px] xsm:w-full">
+        <p
+          class="font-monserrat font-medium text-[54px] leading-[64px] lg:text-[34px] lg:leading-[34px] xsm:leading-auto"
+        >
+          Providing the effective solutions for you
         </p>
         <p class="mt-5 text-[#666270] text-lg">
-          Building a next-generation collaborative platform to <br />connect
-          renters, homeowners, and agents. Live the way <br />you want.
-          Beautiful homes. Incredible locations. Pricing <br />that makes sense.
+          Building a next-generation collaborative platform to connect renters,
+          homeowners, and agents. Live the way you want. Beautiful homes.
+          Incredible locations. Pricing that makes sense.
         </p>
         <button
-          class="bg-[#FD5D11] w-[196px] h-[58px] rounded-[6px] text-white mt-[40px]"
+          class="bg-[#FD5D11] w-[196px] h-[58px] rounded-[6px] text-white mt-[40px] hover:scale-110 duration-300 transition-all cursor-pointer"
         >
           More About Us
         </button>
@@ -208,9 +257,11 @@
     </section>
 
     <!-- Footer -->
-    <section class="bg-[#FFFAE9] w-full py-[150px] px-[250px]">
-      <div class="flex justify-between">
-        <div class="flex w-[40%] flex-col gap-[18px]">
+    <section
+      class="bg-[#FFFAE9] w-full py-[65px] px-[335px] xl:px-[135px] lg:px-[35px]"
+    >
+      <div class="flex justify-between xsm:flex-col gap-5">
+        <div class="flex w-[40%] flex-col gap-[18px] lg:w-[20%] xsm:w-full">
           <div class="flex gap-2 items-center">
             <svg width="26" height="25" viewBox="0 0 26 25" fill="none">
               <path
@@ -243,10 +294,10 @@
               name=""
               id=""
               placeholder="email"
-              class="p-[15px] rounded-xl"
+              class="p-[15px] rounded-xl lg:w-[150px] lg:px-[5px]"
             />
             <button
-              class="text-white bg-[#FD5D11] py-[15px] px-[35px] rounded-xl"
+              class="text-white bg-[#FD5D11] py-[15px] px-[35px] rounded-xl lg:px-[25px] lg:py-[5px]"
             >
               Send
             </button>
@@ -254,25 +305,103 @@
         </div>
         <div class="flex flex-col gap-4">
           <h1 class="text-[22px]">Dwelling</h1>
-          <a href="#"><p class="text-[#666270]">Find my home</p></a>
-          <a href="#"><p class="text-[#666270]">Homeowners</p></a>
-          <a href="#"><p class="text-[#666270]">Community</p></a>
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              Find my home
+            </p></a
+          >
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              Homeowners
+            </p></a
+          >
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              Community
+            </p></a
+          >
         </div>
         <div class="flex flex-col gap-4">
           <h1 class="text-[22px]">Company</h1>
-          <a href="#"><p class="text-[#666270]">Features</p></a>
-          <a href="#"><p class="text-[#666270]">Articles</p></a>
-          <a href="#"><p class="text-[#666270]">Press</p></a>
-          <a href="#"><p class="text-[#666270]">Refer</p></a>
-          <a href="#"><p class="text-[#666270]">Careers</p></a>
-          <a href="#"><p class="text-[#666270]">API documentations</p></a>
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              Features
+            </p></a
+          >
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              Articles
+            </p></a
+          >
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              Press
+            </p></a
+          >
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              Refer
+            </p></a
+          >
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              Careers
+            </p></a
+          >
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              API documentations
+            </p></a
+          >
         </div>
         <div class="flex flex-col gap-4">
           <h1 class="text-[22px]">Support</h1>
-          <a href="#"><p class="text-[#666270]">Contact</p></a>
-          <a href="#"><p class="text-[#666270]">Privacy</p></a>
-          <a href="#"><p class="text-[#666270]">Terms</p></a>
-          <a href="#"><p class="text-[#666270]">FAQ</p></a>
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              Contact
+            </p></a
+          >
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              Privacy
+            </p></a
+          >
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              Terms
+            </p></a
+          >
+          <a href="#"
+            ><p
+              class="text-[#666270] hover:text-[#FD5F0E] hover:text-[#FD5F0E]"
+            >
+              FAQ
+            </p></a
+          >
         </div>
       </div>
       <img src="assets/BG.png" alt="" srcset="" class="w-full mt-[38px]" />
