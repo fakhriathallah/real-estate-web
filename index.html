@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" href="assets/emot2.png" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              montserrat: ["'Montserrat'", 'sans-serif'],
+              inter: ["'Inter'", 'sans-serif'],
+              sacramento: ["'Sacramento'", 'cursive'],
+            },
+            colors: {
+              black: '#151515',
+            },
+          },
+        },
+      };
+    </script>
+    <title>dwelling - real estate</title>
+  </head>
+  <body class="p-0 m-0 box-border font-montserrat">
+    <header
+      class="bg-[#FFFAE9] h-[1271px] w-full py-[35px] px-[250px] relative"
+    >
+      <!-- Navbar -->
+      <nav class="flex items-center justify-between">
+        <div class="flex items-center space-x-[6px]">
+          <svg width="26" height="25" viewBox="0 0 26 25" fill="none">
+            <path
+              d="M22.6519 9.32763L25.9664 12.5294C25.9822 12.5446 25.993 12.5641 25.9976 12.5855C26.0022 12.6069 26.0002 12.6292 25.992 12.6495C25.9838 12.6697 25.9697 12.6871 25.9515 12.6993C25.9334 12.7115 25.912 12.718 25.8901 12.718H22.6519V25H16.5099V17.1053H9.4905V25H3.34849V12.7193H0.109901C0.0880179 12.7193 0.0666216 12.7128 0.0484638 12.7006C0.030306 12.6884 0.016217 12.6711 0.0080085 12.6508C-0.000200029 12.6305 -0.00215272 12.6082 0.00240154 12.5868C0.0069558 12.5654 0.0178087 12.5459 0.0335648 12.5307L13.0002 0L18.7035 5.51184V3.07018H22.6519V9.32763Z"
+              fill="url(#paint0_linear_2_1506)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_2_1506"
+                x1="-1.1003e-07"
+                y1="13"
+                x2="26"
+                y2="13"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#FD5F0E" />
+                <stop offset="1" stop-color="#EF126D" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <p class="text-[24px] font-bold">dwelling</p>
+        </div>
+        <ul class="flex space-x-[42px] ml-[214px] text-4 font-regular">
+          <li><a href="">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Renters</a></li>
+          <li><a href="">Homeowners</a></li>
+          <li><a href="">Reviews</a></li>
+        </ul>
+        <p
+          class="ml-[224px] bg-[#FD5D11] py-[8px] px-[8px] rounded-[6px] w-[115px] text-center text-white"
+        >
+          Register
+        </p>
+      </nav>
+      <!-- Hero -->
+      <div class="flex justify-between space-x-[30px] mt-[92px]">
+        <img src="assets/Rectangle 2.png" class="max-w-[325px] h-[425px]" />
+        <img
+          src="assets/Rectangle 3.png"
+          class="max-w-[325px] h-[425px] mt-[50px]"
+        />
+        <img src="assets/Rectangle 4.png" class="max-w-[325px] h-[425px]" />
+        <img
+          src="assets/Rectangle 5.png"
+          class="max-w-[325px] h-[425px] mt-[50px]"
+        />
+      </div>
+      <div
+        class="font-poppins text-extrabold mt-[55px] text-[84px] leading-[114px]"
+      >
+        <h1 class="font-semibold">Home is where <br />your story begins</h1>
+      </div>
+      <p class="mt-[30px] text-[#666270]">
+        Building a next-generation collaborative platform to connect renters,
+        homeowners, and agents. Live the way you <br />want. Beautiful homes.
+        Incredible locations. Pricing that makes sense.
+      </p>
+      <div class="flex justify-between mt-[50px] items-center">
+        <div
+          class="flex bg-[#FFFFFF] w-[723px] h-[112px] py-[32px] items-center px-[20px] justify-between"
+        >
+          <input
+            type="text"
+            placeholder="Where are you moving?"
+            class="border-[1px] w-[253px] h-[48px] py-[11px] text-center rounded-[6px]"
+          />
+          <input
+            type="text"
+            placeholder="What type of home?"
+            class="border-[1px] w-[253px] h-[48px] py-[11px] text-center rounded-[6px]"
+          />
+          <p class="bg-[#FD5F0E] py-[11px] px-[22px] text-white rounded-[6px]">
+            Find a home
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <svg width="26" height="38" viewBox="0 0 26 38" fill="none">
+            <path
+              d="M14.2 1H11.8C5.83532 1 1 5.83532 1 11.8V26.2C1 32.1647 5.83532 37 11.8 37H14.2C20.1647 37 25 32.1647 25 26.2V11.8C25 5.83532 20.1647 1 14.2 1Z"
+              stroke="#666270"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M15.3996 11.8C15.3996 12.4365 15.1468 13.047 14.6967 13.4971C14.2466 13.9471 13.6361 14.2 12.9996 14.2C12.3631 14.2 11.7526 13.9471 11.3026 13.4971C10.8525 13.047 10.5996 12.4365 10.5996 11.8V9.4C10.5996 8.76348 10.8525 8.15303 11.3026 7.70294C11.7526 7.25286 12.3631 7 12.9996 7C13.6361 7 14.2466 7.25286 14.6967 7.70294C15.1468 8.15303 15.3996 8.76348 15.3996 9.4V11.8Z"
+              stroke="#666270"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="mt-[12px] text-[#666270]">Scroll Down</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Countdown -->
+    <section class="bg-[#6637EE] h-[650px] px-[250px] py-[120px]">
+      <div class="flex items-start justify-center">
+        <p class="text-[54px] text-white">
+          Trusted by the people <br />across the globe
+        </p>
+
+        <div class="ml-[250px]">
+          <p class="text-white text-[18px] leading-[28px]">
+            Building a next-generation collaborative platform to <br />
+            renters, homeowners, and agents. Live the way <br />you want.
+            Beautiful homes. Incredible locations. <br />
+            Pricing that makes sense.
+          </p>
+          <p class="text-white text-[18px] leading-[28px] mt-[20px]">
+            No matter what stage of life you’re in, having friends <br />to
+            share experiences with is what it’s all about.
+          </p>
+        </div>
+      </div>
+      <div class="flex space-x-[150px] justify-center mt-[100px]">
+        <div class="flex items-start">
+          <img src="assets/emot1.png" class="w-[38px] h-[38px] mt-[20px]" />
+          <div class="ml-[14px] text-white">
+            <h1 class="text-[54px]">+20K</h1>
+            <p>Clients worldwide</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <img src="assets/emot2.png" class="w-[38px] h-[38px] mt-[20px]" />
+          <div class="ml-[14px] text-white">
+            <h1 class="text-[54px]">95.7%</h1>
+            <p>Satisfied Clients</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <img src="assets/emot3.png" class="w-[38px] h-[38px] mt-[20px]" />
+          <div class="ml-[14px] text-white">
+            <h1 class="text-[54px]">100+</h1>
+            <p>City Arounds</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section
+      class="flex h-[572px] my-[150px] mx-[250px] items-center justify-between"
+    >
+      <div class="relative w-[570px]">
+        <img src="assets/about-img.png" class="w-[470px] h-[470px]" />
+        <img
+          src="assets/card-about.png"
+          class="absolute left-[342px] bottom-0"
+        />
+      </div>
+      <div class="relative w-[570px] justify-end">
+        <p class="font-monserrat font-medium text-[54px] leading-[64px]">
+          Providing the <br />effective solutions <br />for you
+        </p>
+        <p class="mt-5 text-[#666270] text-lg">
+          Building a next-generation collaborative platform to <br />connect
+          renters, homeowners, and agents. Live the way <br />you want.
+          Beautiful homes. Incredible locations. Pricing <br />that makes sense.
+        </p>
+        <button
+          class="bg-[#FD5D11] w-[196px] h-[58px] rounded-[6px] text-white mt-[40px]"
+        >
+          More About Us
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="bg-[#FFFAE9] w-full py-[150px] px-[250px]">
+      <div class="flex justify-between">
+        <div class="flex w-[40%] flex-col gap-[18px]">
+          <div class="flex gap-2 items-center">
+            <svg width="26" height="25" viewBox="0 0 26 25" fill="none">
+              <path
+                d="M22.6519 9.32763L25.9664 12.5294C25.9822 12.5446 25.993 12.5641 25.9976 12.5855C26.0022 12.6069 26.0002 12.6292 25.992 12.6495C25.9838 12.6697 25.9697 12.6871 25.9515 12.6993C25.9334 12.7115 25.912 12.718 25.8901 12.718H22.6519V25H16.5099V17.1053H9.4905V25H3.34849V12.7193H0.109901C0.0880179 12.7193 0.0666216 12.7128 0.0484638 12.7006C0.030306 12.6884 0.016217 12.6711 0.0080085 12.6508C-0.000200029 12.6305 -0.00215272 12.6082 0.00240154 12.5868C0.0069558 12.5654 0.0178087 12.5459 0.0335648 12.5307L13.0002 0L18.7035 5.51184V3.07018H22.6519V9.32763Z"
+                fill="url(#paint0_linear_2_1506)"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_2_1506"
+                  x1="-1.1003e-07"
+                  y1="13"
+                  x2="26"
+                  y2="13"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#FD5F0E" />
+                  <stop offset="1" stop-color="#EF126D" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <h1 class="text-2xl">dwelling</h1>
+          </div>
+          <p class="text-[18px] text-[#666270]">
+            Building a next-generation collaborative platform to connect
+            renters, homeowners, and agents.
+          </p>
+          <div class="flex gap-5">
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="email"
+              class="p-[15px] rounded-xl"
+            />
+            <button
+              class="text-white bg-[#FD5D11] py-[15px] px-[35px] rounded-xl"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h1 class="text-[22px]">Dwelling</h1>
+          <a href="#"><p class="text-[#666270]">Find my home</p></a>
+          <a href="#"><p class="text-[#666270]">Homeowners</p></a>
+          <a href="#"><p class="text-[#666270]">Community</p></a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h1 class="text-[22px]">Company</h1>
+          <a href="#"><p class="text-[#666270]">Features</p></a>
+          <a href="#"><p class="text-[#666270]">Articles</p></a>
+          <a href="#"><p class="text-[#666270]">Press</p></a>
+          <a href="#"><p class="text-[#666270]">Refer</p></a>
+          <a href="#"><p class="text-[#666270]">Careers</p></a>
+          <a href="#"><p class="text-[#666270]">API documentations</p></a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h1 class="text-[22px]">Support</h1>
+          <a href="#"><p class="text-[#666270]">Contact</p></a>
+          <a href="#"><p class="text-[#666270]">Privacy</p></a>
+          <a href="#"><p class="text-[#666270]">Terms</p></a>
+          <a href="#"><p class="text-[#666270]">FAQ</p></a></a>
+        </div>
+      </div>
+      <img src="assets/BG.png" alt="" srcset="" class="w-full mt-[38px]" />
+      <div class="flex gap-4 mt-[28px]">
+        <a href=""><img src="assets/facebook-logo.png" alt="" /></a>
+        <a href=""><img src="assets/linkedin-logo.png" alt="" /></a>
+        <a href=""><img src="assets/twitter-logo.png" alt="" /></a>
+      </div>
+    </section>
+  </body>
+</html>
